@@ -88,17 +88,17 @@ export default function ContactForm() {
               </div>
               <p className="text-pink-300 font-bold mb-3 text-lg">+3 millones de licencias gestionadas exitosamente</p>
 
-              <div className="grid grid-cols-3 gap-8 mt-10">
-                <div className="group p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-                  <p className="text-pink-300 font-bold text-3xl mb-2 group-hover:text-pink-200">MM$16.000</p>
+              <div className="grid grid-cols-3 gap-6 mt-10">
+                <div className="group p-5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                  <p className="text-pink-300 font-bold text-2xl mb-2 group-hover:text-pink-200 break-words">MM$16.000</p>
                   <p className="text-blue-100 text-xs">recuperados</p>
                 </div>
-                <div className="group p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-                  <p className="text-pink-300 font-bold text-3xl mb-2 group-hover:text-pink-200">+70</p>
+                <div className="group p-5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                  <p className="text-pink-300 font-bold text-2xl mb-2 group-hover:text-pink-200 break-words">+70</p>
                   <p className="text-blue-100 text-xs">empresas confían</p>
                 </div>
-                <div className="group p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-                  <p className="text-pink-300 font-bold text-3xl mb-2 group-hover:text-pink-200">60%</p>
+                <div className="group p-5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                  <p className="text-pink-300 font-bold text-2xl mb-2 group-hover:text-pink-200 break-words">60%</p>
                   <p className="text-blue-100 text-xs">máximo ahorro</p>
                 </div>
               </div>
