@@ -31,23 +31,23 @@ export default function SolutionBenefits() {
   ];
 
   return (
-    <section id="solucion" className="py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
+    <section id="solucion" className="py-12 md:py-16 lg:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5 relative overflow-hidden">
       {/* M3 decorative background */}
       <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
       
-      <div className="max-w-7xl mx-auto px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10">
         {/* M3 Headline Large */}
-        <div className="text-center mb-16">
-          <h2 className="text-headline-large mb-4">La solución: AGS WEB-SIL</h2>
-          <p className="text-body-large text-muted-foreground max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-headline-large mb-3 md:mb-4">La solución: AGS WEB-SIL</h2>
+          <p className="text-base md:text-body-large text-muted-foreground max-w-3xl mx-auto px-4">
             Optimizamos la gestión y recuperación de fondos a través de una combinación única de
             tecnología y experiencia profesional
           </p>
         </div>
 
         {/* M3 Solution cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16 md:mb-20">
           <Card className="p-8 hover-elevate transition-all duration-200 rounded-[24px] bg-white border-border" data-testid="card-software">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 bg-primary/10 rounded-[16px] flex items-center justify-center elevation-1">

@@ -39,20 +39,20 @@ export default function RiskCalculator() {
   };
 
   return (
-    <section id="calculadora" className="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
-      <div className="max-w-5xl mx-auto px-8">
+    <section id="calculadora" className="py-12 md:py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-primary/10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
         {/* M3 Headline Large */}
-        <div className="text-center mb-12">
-          <h2 className="text-headline-large mb-4">Calcule su riesgo de exposición</h2>
-          <p className="text-body-large text-muted-foreground">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-headline-large mb-3 md:mb-4">Calcule su riesgo de exposición</h2>
+          <p className="text-base md:text-body-large text-muted-foreground px-4">
             Estime cuánto podría estar perdiendo su empresa en subsidios no recuperados
           </p>
         </div>
 
         {/* M3 surface container (not a Card to avoid nesting) */}
-        <div className="p-10 rounded-[24px] elevation-2 bg-card border border-border">
-          <div className="mb-10">
-            <label className="block text-title-large mb-6">
+        <div className="p-6 md:p-8 lg:p-10 rounded-[24px] elevation-2 bg-card border border-border">
+          <div className="mb-8 md:mb-10">
+            <label className="block text-lg md:text-title-large mb-4 md:mb-6">
               Tamaño de su dotación: <span className="text-primary font-semibold">{dotacion.toLocaleString('es-CL')}</span> trabajadores
             </label>
             <Slider
@@ -61,17 +61,17 @@ export default function RiskCalculator() {
               min={100}
               max={10000}
               step={100}
-              className="mb-3"
+              className="mb-3 h-3 cursor-pointer touch-pan-x"
               data-testid="slider-dotacion"
             />
-            <div className="flex justify-between text-label-medium text-muted-foreground">
+            <div className="flex justify-between text-sm md:text-label-medium text-muted-foreground">
               <span>100</span>
               <span>10,000</span>
             </div>
           </div>
 
           {/* M3 Result cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
             <Card className="p-6 bg-card rounded-[24px] hover-elevate transition-all duration-200 border-border" data-testid="card-riesgo-mensual">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-[16px] flex items-center justify-center elevation-1">
