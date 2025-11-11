@@ -8,8 +8,8 @@ export default function ModernFooter() {
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 py-24 border-b border-border/30 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16 lg:py-24 border-b border-border/30 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 mb-12 md:mb-16">
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-3 mb-6 group cursor-pointer">

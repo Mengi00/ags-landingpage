@@ -20,17 +20,17 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="w-full bg-background py-24 relative overflow-hidden">
+    <section className="w-full bg-background py-12 md:py-16 lg:py-24 relative overflow-hidden">
       <div className="absolute -bottom-20 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10">
         {/* M3 Headline Large */}
-        <h2 className="text-headline-large bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-20 text-center">
+        <h2 className="text-3xl md:text-headline-large bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-12 md:mb-16 lg:mb-20 text-center">
           Resultados Comprobables
         </h2>
 
         {/* M3 Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
