@@ -49,8 +49,8 @@ export default function RiskCalculator() {
           </p>
         </div>
 
-        {/* M3 Card with 24px radius */}
-        <Card className="p-10 rounded-[24px] elevation-2">
+        {/* M3 surface container (not a Card to avoid nesting) */}
+        <div className="p-10 rounded-[24px] elevation-2 bg-card border border-border">
           <div className="mb-10">
             <label className="block text-title-large mb-6">
               Tamaño de su dotación: <span className="text-primary font-semibold">{dotacion.toLocaleString('es-CL')}</span> trabajadores
@@ -126,7 +126,7 @@ export default function RiskCalculator() {
               Recupere estos fondos - Contáctenos
             </Button>
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );
