@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LIGHT MODE */
+/* MATERIAL DESIGN 3 - LIGHT MODE (Not used but kept for compatibility) */
 :root {
   --button-outline: rgba(0,0,0, .10);
   --badge-outline: rgba(0,0,0, .05);
@@ -18,18 +18,18 @@
   --sidebar: 220 13% 96%;
   --sidebar-foreground: 220 13% 13%;
   --sidebar-border: 220 13% 92%;
-  --sidebar-primary: 211 100% 43%;
+  --sidebar-primary: 217 91% 50%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 220 13% 91%;
   --sidebar-accent-foreground: 220 13% 13%;
-  --sidebar-ring: 211 100% 43%;
+  --sidebar-ring: 217 91% 50%;
   --popover: 0 0% 95%;
   --popover-foreground: 220 13% 13%;
   --popover-border: 220 13% 89%;
-  --primary: 217 91% 35%;
+  --primary: 217 91% 50%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 220 13% 90%;
-  --secondary-foreground: 220 13% 13%;
+  --secondary: 330 81% 60%;
+  --secondary-foreground: 0 0% 100%;
   --muted: 220 10% 92%;
   --muted-foreground: 220 10% 35%;
   --accent: 220 12% 93%;
@@ -37,16 +37,16 @@
   --destructive: 0 84% 45%;
   --destructive-foreground: 0 0% 100%;
   --input: 220 13% 75%;
-  --ring: 211 100% 43%;
-  --chart-1: 211 100% 35%;
+  --ring: 217 91% 50%;
+  --chart-1: 217 91% 50%;
   --chart-2: 190 85% 40%;
   --chart-3: 25 95% 45%;
   --chart-4: 280 70% 45%;
   --chart-5: 140 65% 40%;
-  --font-sans: Inter, sans-serif;
+  --font-sans: 'Roboto', 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: Georgia, serif;
-  --font-mono: Menlo, monospace;
-  --radius: .5rem;
+  --font-mono: 'Roboto Mono', Menlo, monospace;
+  --radius: 1.5rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(220 13% 50% / 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(220 13% 50% / 0.00);
   --shadow-sm: 0px 2px 0px 0px hsl(220 13% 50% / 0.00), 0px 1px 2px -1px hsl(220 13% 50% / 0.00);
@@ -56,77 +56,87 @@
   --shadow-xl: 0px 2px 0px 0px hsl(220 13% 50% / 0.00), 0px 8px 10px -1px hsl(220 13% 50% / 0.00);
   --shadow-2xl: 0px 2px 0px 0px hsl(220 13% 50% / 0.00);
   --tracking-normal: 0em;
-  --spacing: 0.25rem;
+  --spacing: 0.5rem;
 
 /* Fallback for older browsers */
   --sidebar-primary-border: hsl(var(--sidebar-primary));
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --sidebar-accent-border: hsl(var(--sidebar-accent));
   --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --primary-border: hsl(var(--primary));
   --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --secondary-border: hsl(var(--secondary));
   --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --muted-border: hsl(var(--muted));
   --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --accent-border: hsl(var(--accent));
   --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --destructive-border: hsl(var(--destructive));
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
+/* MATERIAL DESIGN 3 - DARK THEME */
 .dark {
   --button-outline: rgba(255,255,255, .10);
   --badge-outline: rgba(255,255,255, .05);
   --opaque-button-border-intensity: 9;
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
-  --background: 220 13% 9%;
-  --foreground: 0 0% 98%;
-  --border: 220 13% 20%;
-  --card: 220 13% 11%;
-  --card-foreground: 0 0% 98%;
-  --card-border: 220 13% 14%;
-  --sidebar: 220 13% 13%;
-  --sidebar-foreground: 0 0% 98%;
-  --sidebar-border: 220 13% 17%;
-  --sidebar-primary: 211 100% 50%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 220 13% 18%;
-  --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-ring: 211 100% 50%;
-  --popover: 220 13% 15%;
-  --popover-foreground: 0 0% 98%;
-  --popover-border: 220 13% 19%;
-  --primary: 217 91% 40%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 220 13% 20%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 220 10% 19%;
-  --muted-foreground: 220 10% 70%;
-  --accent: 220 12% 18%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 84% 42%;
-  --destructive-foreground: 0 0% 100%;
-  --input: 220 13% 30%;
-  --ring: 211 100% 50%;
-  --chart-1: 211 100% 65%;
-  --chart-2: 190 85% 60%;
-  --chart-3: 25 95% 65%;
-  --chart-4: 280 70% 65%;
-  --chart-5: 140 65% 60%;
+  
+  /* M3 Dark Surface Colors */
+  --background: 222 47% 5%;            /* #0F172A - Surface lowest */
+  --foreground: 210 20% 98%;           /* #F8FAFC - On surface */
+  --border: 217 33% 17%;               /* #1E293B border */
+  
+  /* M3 Card Surfaces with elevation */
+  --card: 217 33% 13%;                 /* #1E293B - Surface container low */
+  --card-foreground: 210 20% 98%;      /* On surface */
+  --card-border: 217 33% 20%;          /* Border subtle */
+  
+  /* Sidebar - Surface container */
+  --sidebar: 217 33% 13%;              /* #1E293B */
+  --sidebar-foreground: 210 20% 98%;   
+  --sidebar-border: 217 33% 17%;       
+  --sidebar-primary: 217 91% 60%;      /* Primary blue M3 */
+  --sidebar-primary-foreground: 210 20% 98%;
+  --sidebar-accent: 217 33% 20%;       
+  --sidebar-accent-foreground: 210 20% 98%;
+  --sidebar-ring: 217 91% 60%;
+  
+  /* Popover - Surface container high */
+  --popover: 215 25% 20%;              /* #334155 elevated */
+  --popover-foreground: 210 20% 98%;
+  --popover-border: 217 33% 25%;
+  
+  /* M3 Primary Color - Blue */
+  --primary: 217 91% 60%;              /* #3B82F6 - Primary M3 */
+  --primary-foreground: 210 20% 98%;
+  
+  /* M3 Secondary Color - Pink */
+  --secondary: 330 81% 60%;            /* #EC4899 - Secondary pink */
+  --secondary-foreground: 210 20% 98%;
+  
+  /* Muted and Accent */
+  --muted: 215 25% 20%;                /* Surface variant */
+  --muted-foreground: 220 9% 70%;      /* On surface variant */
+  --accent: 217 33% 20%;               
+  --accent-foreground: 210 20% 98%;
+  
+  /* Destructive */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 20% 98%;
+  
+  /* Input */
+  --input: 217 33% 25%;
+  --ring: 217 91% 60%;
+  
+  /* M3 Chart colors with proper contrast */
+  --chart-1: 217 91% 65%;              /* Blue */
+  --chart-2: 190 85% 60%;              /* Cyan */
+  --chart-3: 25 95% 65%;               /* Orange */
+  --chart-4: 280 70% 65%;              /* Purple */
+  --chart-5: 140 65% 60%;              /* Green */
+  
   --shadow-2xs: 0px 2px 0px 0px hsl(220 13% 50% / 0.00);
   --shadow-xs: 0px 2px 0px 0px hsl(220 13% 50% / 0.00);
   --shadow-sm: 0px 2px 0px 0px hsl(220 13% 50% / 0.00), 0px 1px 2px -1px hsl(220 13% 50% / 0.00);
@@ -139,28 +149,16 @@
 /* Fallback for older browsers */
   --sidebar-primary-border: hsl(var(--sidebar-primary));
   --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --sidebar-accent-border: hsl(var(--sidebar-accent));
   --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --primary-border: hsl(var(--primary));
   --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --secondary-border: hsl(var(--secondary));
   --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --muted-border: hsl(var(--muted));
   --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --accent-border: hsl(var(--accent));
   --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
-
-  /* Fallback for older browsers */
   --destructive-border: hsl(var(--destructive));
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
@@ -172,6 +170,103 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  /* Material Design 3 Typography Scale */
+  .text-display-large {
+    font-size: 57px;
+    line-height: 64px;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+  }
+  
+  .text-display-medium {
+    font-size: 45px;
+    line-height: 52px;
+    font-weight: 400;
+  }
+  
+  .text-display-small {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 400;
+  }
+  
+  .text-headline-large {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+  
+  .text-headline-medium {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+  
+  .text-headline-small {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  
+  .text-title-large {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+  
+  .text-title-medium {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+  }
+  
+  .text-title-small {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+  
+  .text-body-large {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  
+  .text-body-medium {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  
+  .text-body-small {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  
+  .text-label-large {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+  
+  .text-label-medium {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .text-label-small {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
   }
 }
 
@@ -284,5 +379,26 @@
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
+  }
+  
+  /* Material Design 3 Elevation Utilities */
+  .elevation-1 {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.3), 0 1px 3px 1px rgb(0 0 0 / 0.15);
+  }
+  
+  .elevation-2 {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.3), 0 2px 6px 2px rgb(0 0 0 / 0.15);
+  }
+  
+  .elevation-3 {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 4px 8px 3px rgb(0 0 0 / 0.15);
+  }
+  
+  .elevation-4 {
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.3), 0 6px 10px 4px rgb(0 0 0 / 0.15);
+  }
+  
+  .elevation-5 {
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.3), 0 8px 12px 6px rgb(0 0 0 / 0.15);
   }
 }
