@@ -1,9 +1,9 @@
-# AGS WEB-SIL Landing Page - Material Design 3 Dark Theme Guidelines
+# AGS WEB-SIL Landing Page - Material Design 3 Light Theme Guidelines
 
 ## Design Approach
-**Design System Approach**: Material Design 3 with dark theme baseline, customized for B2B enterprise credibility. Chilean financial services targeting Finance/HR/Treasury departments require trust signals while embracing modern, premium aesthetics.
+**Design System Approach**: Material Design 3 with light theme baseline, customized for B2B enterprise credibility. Chilean financial services targeting Finance/HR/Treasury departments require trust signals while embracing modern, clean, professional aesthetics.
 
-**Key Principles**: Elevated surfaces over flat design, tonal elevation instead of heavy shadows, sophisticated dark-mode optimization, glassmorphism for depth, premium Material You color system integration.
+**Key Principles**: Clean surfaces with subtle elevation, tonal elevation instead of heavy shadows, sophisticated light-mode optimization, subtle gradients for depth, premium Material You color system integration with bright, welcoming atmosphere.
 
 ## Core Design Elements
 
@@ -28,52 +28,52 @@
 ### C. Component Library
 
 **Navigation**
-- Elevated surface container (surface-dim #1E293B)
-- Logo left, nav center, "Calcular Riesgo" FAB button right (#1E40AF with elevation-1)
-- Sticky with backdrop-blur-xl glassmorphism
-- Mobile: Bottom sheet navigation drawer
+- Clean white surface with subtle border-bottom
+- Logo left, nav center, "Calcular Riesgo" button right (primary blue)
+- Sticky with slight background blur
+- Mobile: Drawer navigation
 
 **Hero Section** (85vh)
-- Dark gradient background (#0F172A to #1E293B)
-- Two-column: Left (55%) headline/CTAs, Right (45%) elevated card with dashboard preview image
+- Light gradient background (white to very light blue #F0F9FF)
+- Two-column: Left (55%) headline/CTAs, Right (45%) elevated card with dashboard preview
 - Display Large headline with gradient text (#3B82F6 to #EC4899)
-- Dual FAB CTAs: Primary (#1E40AF), Secondary outlined
-- Glassmorphic stat chips below: "MM$16.000+ recuperados" with floating badge effect
-- Client logo chips (Itaú, Metro, Collahuasi) with surface-bright containers
+- Dual CTAs: Primary blue button, Secondary outlined
+- Stat chips below: "MM$16.000+ recuperados" with elevated containers
+- Client logo chips (Itaú, Metro, Collahuasi) with light surface containers
 
 **Problem Sections**
-1. **Statistics Grid**: 4 elevated cards (surface-container #334155, rounded-3xl)
+1. **Statistics Grid**: 4 elevated cards (white with subtle border, rounded-[24px])
    - Large gradient numbers (#3B82F6 to #EC4899)
-   - Body Large descriptions
-   - Subtle elevation-2 with tonal shadows
+   - Body Large descriptions in dark text
+   - Subtle elevation with tonal shadows
    
 2. **Process Complexity Timeline**: Horizontal stepper with 7 nodes
    - Connected lines with gradient
-   - Elevated circular step indicators
+   - Elevated circular step indicators (white bg)
    - Time estimate chip at end
    
 3. **Comparison Flow**: Two surface containers side-by-side
    - "Sin AGS" (red accent), "Con AGS" (green accent)
-   - Glassmorphic overlays for emphasis
+   - Light containers with colored accents
 
 **Interactive Calculator**
-- Prominent elevated surface-bright card with 24px border radius
-- Gradient border effect (1px, #1E40AF to #EC4899)
-- Material slider with custom primary color thumb
-- Three result cards with elevation-3, animated number transitions
-- Bottom FAB: "Recuperar Fondos" (#EC4899)
+- Prominent elevated white card with 24px border radius
+- Subtle gradient border effect (1px, light blue to light pink)
+- Material slider with custom primary blue thumb
+- Three result cards with subtle elevation, animated number transitions
+- Bottom button: "Recuperar Fondos" (pink #EC4899)
 
 **Solution Section**
-- Two elevated cards (Software | Servicios) in grid
-- Icon system: Material Symbols (rounded variant)
+- Two elevated white cards (Software | Servicios) in grid
+- Icon system: Material Symbols (rounded variant) in blue
 - Checklist items with chip-style indicators
 - Center: Elevated integration diagram card
 
 **5 Pillars Grid**
-- Five elevated cards (3-2 layout desktop, stack mobile)
-- Each: 24px rounded corners, p-6 padding, surface-container-high
+- Five elevated white cards (3-2 layout desktop, stack mobile)
+- Each: 24px rounded corners, p-6 padding, white background with border
 - Custom gradient icons in circular containers
-- Hover: elevation-2 to elevation-3 transition
+- Hover: subtle elevation transition
 
 **Timeline Implementation**
 - Stepped progress surface with 2 phases
@@ -82,54 +82,102 @@
 - Visual completion indicators
 
 **Pricing Cards**
-- Three elevated surface-bright cards with 24px radius
+- Three elevated white cards with 24px radius
 - Gradient accent borders on recommended tier
-- Percentage badges as Material chips (#EC4899)
-- FAB at bottom: "Diagnóstico Gratuito"
+- Percentage badges as Material chips (pink #EC4899)
+- Button at bottom: "Diagnóstico Gratuito"
 
 **Social Proof**
-- Glassmorphic container with logo grid (8-10 logos with individual surface chips)
-- Stat cards: Elevated containers with gradient numbers
+- Light container with logo grid (8-10 logos with individual white cards)
+- Stat cards: Elevated white containers with gradient numbers
 - Badge chips: "Sector Público desde 2014" with outlined style
 
 **Contact Section**
-- Two-column: Form card (elevated, p-8) | Contact info card
+- Two-column: Form card (elevated white, p-8) | Contact info card
 - Text fields: Material outlined variant with primary blue focus
 - Dropdown: Material filled variant for "Dotación"
-- CRM badge: Floating chip with glassmorphism
-- Submit FAB: Primary blue, full-width mobile
-- Right: Office image in elevated surface container + contact chips
+- Submit button: Primary blue, full-width mobile
+- Right: Contact info with icons in elevated chips
 
 **Footer**
-- Surface-dim background (#1E293B)
-- Three columns with dividers
+- Light gray background (#F8FAFC)
+- Three columns with subtle dividers
 - Social icon chips (outlined)
-- Newsletter input: Material filled field
+- Newsletter input: Material outlined field
 - Secondary pink accent for links
 
 ### D. Interactions
 - Smooth scroll with easing
 - Calculator: Real-time updates with Material motion
-- Form: Inline validation with error chips
-- Cards: Elevation transitions on hover (subtle 100ms)
-- FABs: State layer overlay on interaction
-- Glassmorphism: backdrop-blur-xl on hero/navigation
+- Form: Inline validation with error indicators
+- Cards: Subtle elevation transitions on hover (100ms)
+- Buttons: State layer overlay on interaction
+- Subtle backdrop blur on sticky navigation
+
+## Color Palette (Light Theme)
+
+### Primary Colors
+- **Primary Blue**: #3B82F6 (blue-500)
+- **Primary Container**: #DBEAFE (blue-100)
+- **On Primary**: #FFFFFF (white text on blue)
+
+### Secondary Colors
+- **Secondary Pink**: #EC4899 (pink-500)
+- **Secondary Container**: #FCE7F3 (pink-100)
+- **On Secondary**: #FFFFFF (white text on pink)
+
+### Surface Colors
+- **Background**: #FFFFFF (pure white)
+- **Surface**: #FFFFFF (white cards)
+- **Surface Variant**: #F8FAFC (very light gray)
+- **Surface Container**: #F1F5F9 (light gray)
+
+### Text Colors
+- **On Surface**: #0F172A (dark slate for primary text)
+- **On Surface Variant**: #475569 (medium gray for secondary text)
+- **On Surface Dim**: #64748B (light gray for tertiary text)
+
+### Border Colors
+- **Outline**: #E2E8F0 (very light gray borders)
+- **Outline Variant**: #CBD5E1 (medium gray borders)
+
+### Gradient Accents
+- **Blue to Pink**: linear-gradient(135deg, #3B82F6 0%, #EC4899 100%)
+- **Light Blue Background**: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%)
 
 ## Images
 
-**Hero Image**: Modern financial dashboard mockup or data analytics interface shown on elevated device frame. Dark mode UI with blue/pink accent visualization. High-quality, crisp rendering suggesting precision and technology.
+**Hero Image**: Modern financial dashboard mockup or data analytics interface shown on elevated device frame. Light mode UI with blue/pink accent visualization. High-quality, crisp rendering suggesting precision and technology.
 
 **Section Images**:
-- Calculator section background: Subtle gradient mesh or abstract data pattern
+- Calculator section background: Subtle gradient mesh or abstract data pattern in light colors
 - Solution section: Integration workflow diagram or system architecture visualization
 - Contact section: Modern office space or professional team collaboration scene (elevated card treatment)
 
-**Image Treatment**: All images in elevated surface containers with 24px border radius, subtle 1px gradient borders where appropriate. Hero image has glassmorphic overlay for CTA legibility. No image backgrounds for buttons - use blur backdrop instead.
+**Image Treatment**: All images in elevated white containers with 24px border radius, subtle borders where appropriate. Hero image has subtle overlay for CTA legibility.
 
 ## Material Design 3 Specifics
-- **Elevation System**: Use tonal surfaces (elevation-1 through elevation-5) not drop shadows
+- **Elevation System**: Use tonal surfaces (subtle shadows and borders) not heavy drop shadows
 - **State Layers**: 8% opacity overlays for hover, 12% for focus, 16% for press
-- **Border Radius**: Consistent 24px for cards, 100px for FABs/chips, 12px for smaller elements
-- **Glassmorphism**: backdrop-blur-xl + bg-opacity-10 on floating elements
+- **Border Radius**: Consistent 24px for cards, 100px for buttons/chips, 12px for smaller elements
+- **Subtle Effects**: Minimal blur effects, light gradients for depth
 - **Motion**: 200ms ease-in-out for elevations, 100ms for state changes
-- **Surface Tinting**: Apply subtle primary blue tint (5% opacity) to elevated surfaces for depth
+- **Surface Tinting**: Apply subtle primary blue tint (3% opacity) to elevated surfaces for depth
+
+## Accessibility
+- Minimum contrast ratio 4.5:1 for body text, 3:1 for large text
+- Focus indicators on all interactive elements (blue ring)
+- Keyboard navigation support
+- ARIA labels on icon-only buttons
+
+## Responsive Behavior
+- **Desktop** (1280px+): Full two-column layouts, expanded navigation
+- **Tablet** (768px-1279px): Adaptive columns, condensed spacing
+- **Mobile** (<768px): Single column, stacked cards, bottom drawer navigation
+
+## Component States
+- **Default**: Clean white surfaces with subtle borders
+- **Hover**: Slight elevation increase (shadow intensification)
+- **Focus**: Blue ring outline (2px)
+- **Active**: Deeper blue or pink fill depending on context
+- **Disabled**: 38% opacity, no interaction states

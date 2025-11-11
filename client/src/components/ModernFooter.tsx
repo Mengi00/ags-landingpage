@@ -2,10 +2,10 @@ import { Facebook, Instagram, Linkedin, Twitter, Globe, Mail, Phone } from 'luci
 
 export default function ModernFooter() {
   return (
-    <footer className="w-full bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A] text-foreground relative overflow-hidden">
+    <footer className="w-full bg-gradient-to-b from-white via-slate-50 to-slate-100 text-foreground relative overflow-hidden border-t border-border">
       {/* M3 decorative background */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-8 py-24 border-b border-border/30 relative z-10">
@@ -118,16 +118,13 @@ export default function ModernFooter() {
       </div>
 
       {/* M3 Bottom CTA section */}
-      <div className="bg-gradient-to-r from-primary via-primary/95 to-primary/85 py-12 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-        </div>
+      <div className="bg-gradient-to-r from-primary/10 via-blue-50 to-primary/10 py-12 relative overflow-hidden border-t border-border">
         <div className="max-w-7xl mx-auto px-8 text-center relative z-10">
           <a
             href="https://agschile.cl"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary-foreground hover:text-white/90 text-title-medium transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 text-title-medium transition-colors duration-200"
             data-testid="link-website"
           >
             <Globe size={20} />

@@ -1,7 +1,7 @@
 # AGS WEB-SIL Landing Page
 
 ## Project Overview
-Modern landing page for AGS WEB-SIL, a Chilean medical license subsidy management service. **Now redesigned with Material Design 3 (M3)** featuring a cohesive dark theme, blue/pink color palette, and streamlined component architecture that eliminates content duplication.
+Modern landing page for AGS WEB-SIL, a Chilean medical license subsidy management service. **Now redesigned with Material Design 3 (M3)** featuring a cohesive light theme, blue/pink color palette, and streamlined component architecture that eliminates content duplication.
 
 ## Purpose & Goals
 - Convert visitors into qualified leads through compelling storytelling and social proof
@@ -19,24 +19,25 @@ Modern landing page for AGS WEB-SIL, a Chilean medical license subsidy managemen
 - **Backend**: Express.js (Node.js)
 - **Storage**: In-memory (MemStorage)
 
-## Material Design 3 System (November 2025 Redesign)
+## Material Design 3 System (November 2025 Redesign - Light Theme)
 
 ### Color Palette
 **M3 Primary (Blue):**
 - Primary: `#3B82F6` (blue-500)
-- Primary Container: `#1E40AF` (blue-800)
+- Primary Container: `#DBEAFE` (blue-100)
 - On Primary: White text on primary backgrounds
 
 **M3 Secondary (Pink/Magenta):**
 - Secondary: `#EC4899` (pink-500)
-- Secondary Container: Darker pink variants
+- Secondary Container: `#FCE7F3` (pink-100)
 - On Secondary: White text on secondary backgrounds
 
-**M3 Surface & Background:**
-- Background: Dark slate (`#0F172A`, `#1E293B`)
-- Surface: Card backgrounds with tonal variations
-- Surface Dim/Bright: Subtle elevation hierarchy
-- Border colors: Low-opacity white (`border-white/10`)
+**M3 Surface & Background (Light Theme):**
+- Background: Pure white (`#FFFFFF`)
+- Surface: White cards with subtle borders
+- Surface Variant: Very light gray (`#F8FAFC`)
+- Text: Dark slate for readability
+- Border colors: Light gray (`#E2E8F0`)
 
 ### Typography Scale (M3)
 Based on Roboto/system fonts with M3 type scale:
@@ -122,25 +123,25 @@ Based on Tec de Monterrey's corporate programs landing page:
 - Clean, professional B2B aesthetic
 - Dynamic visual elements
 
-## Recent Changes (November 2025 - Material Design 3 Redesign)
-- ✅ Complete Material Design 3 redesign with dark theme
-- ✅ Generated design_guidelines.md with M3 specifications
-- ✅ Updated index.css with M3 color tokens and elevation system
+## Recent Changes (November 2025 - Material Design 3 Light Theme Redesign)
+- ✅ Complete Material Design 3 redesign with **light theme**
+- ✅ Generated design_guidelines.md with M3 light theme specifications
+- ✅ Updated index.css with M3 light theme color tokens and elevation system
 - ✅ Eliminated ALL duplicate statistics (consolidated into single StatsSection)
 - ✅ Consolidated components from 13 to 9 (removed CTASection, Implementation)
 - ✅ Merged ProblemStats + ProcessComplexity → Problem component
 - ✅ Merged Solution + FivePillars → SolutionBenefits component
-- ✅ Redesigned all components with M3 styling:
-  - ModernHero: Display typography, streamlined CTAs
-  - StatsSection: 4 M3 cards with 24px border radius
-  - Problem: Consolidated problem data without duplication
-  - SolutionBenefits: 5 pillars integrated into solution
-  - RiskCalculator: M3 cards, proper container (no card nesting)
-  - Testimonials: M3 elevation and styling
-  - PricingModel: M3 pricing tiers
-  - ContactForm: M3 inputs, contact info cards (NO stats)
-  - ModernHeader: M3 navigation with elevation
-  - ModernFooter: M3 footer styling
+- ✅ Redesigned all components with M3 light theme styling:
+  - ModernHero: Light gradient background (white to blue-50), dark text
+  - StatsSection: White cards on light gray background with gradient numbers
+  - Problem: White cards on light background with M3 elevation
+  - SolutionBenefits: Light gradient background (blue-50 to pink-50) with white cards
+  - RiskCalculator: Light background with white cards
+  - Testimonials: White cards with M3 elevation
+  - PricingModel: White pricing cards
+  - ContactForm: Light gradient background with white form
+  - ModernHeader: White background with subtle border
+  - ModernFooter: Light gray gradient with white text on light background
 - ✅ Lead capture system fully functional and tested:
   - Lead schema with Zod validation
   - API endpoint POST /api/leads with validation

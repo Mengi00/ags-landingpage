@@ -72,10 +72,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contacto" className="w-full bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] py-24 relative overflow-hidden">
+    <section id="contacto" className="w-full bg-gradient-to-br from-slate-50 via-white to-blue-50 py-24 relative overflow-hidden">
       {/* M3 decorative background */}
-      <div className="absolute -top-40 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute -bottom-20 left-1/3 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute -top-40 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute -bottom-20 left-1/3 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

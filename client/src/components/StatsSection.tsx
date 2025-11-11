@@ -9,11 +9,11 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-br from-primary via-primary/90 to-primary/80 py-24 relative overflow-hidden">
+    <section className="w-full bg-gradient-to-br from-slate-50 via-white to-slate-50 py-24 relative overflow-hidden">
       {/* M3 decorative background elements */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-secondary rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
+        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-8 relative z-10">
@@ -23,24 +23,24 @@ export default function StatsSection() {
             return (
               <div
                 key={idx}
-                className="group flex flex-col gap-4 p-8 hover:bg-white/10 backdrop-blur-sm rounded-[24px] border border-white/20 hover:border-white/40 transition-all duration-200 hover:-translate-y-1 elevation-1 hover:elevation-3"
+                className="group flex flex-col gap-4 p-8 bg-white hover:bg-slate-50 rounded-[24px] border border-border hover:border-primary/30 transition-all duration-200 hover:-translate-y-1 elevation-1 hover:elevation-3"
                 data-testid={`card-stat-${idx}`}
               >
                 {/* M3 Icon container */}
-                <div className="w-16 h-16 bg-white/95 rounded-full flex items-center justify-center flex-shrink-0 elevation-2 group-hover:elevation-4 group-hover:scale-110 transition-all duration-200">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 elevation-1 group-hover:elevation-2 group-hover:scale-110 transition-all duration-200">
                   <Icon size={28} className="text-primary" />
                 </div>
                 
                 {/* M3 Typography - Display Medium for numbers */}
-                <div className="text-display-medium font-normal text-white group-hover:scale-105 transition-transform duration-200">
+                <div className="text-display-medium font-normal bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-200">
                   {stat.number}
                 </div>
                 
                 {/* M3 Title Large for label */}
-                <div className="text-title-large text-white/95">{stat.label}</div>
+                <div className="text-title-large text-foreground">{stat.label}</div>
                 
                 {/* M3 Body Small for highlight */}
-                <div className="text-body-small text-white/70 mt-1">{stat.highlight}</div>
+                <div className="text-body-small text-muted-foreground mt-1">{stat.highlight}</div>
               </div>
             );
           })}
