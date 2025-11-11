@@ -26,27 +26,37 @@ export default function ContactForm() {
 
   const createLeadMutation = useMutation({
     mutationFn: async (data: InsertLead) => {
+      console.log('ContactForm: Submitting lead data:', data);
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
       
+      console.log('ContactForm: Response status:', response.status);
+      
       if (!response.ok) {
         const error = await response.json();
+        console.error('ContactForm: Error response:', error);
         throw new Error(error.error || 'Error al enviar el formulario');
       }
       
-      return response.json();
+      const result = await response.json();
+      console.log('ContactForm: Success response:', result);
+      return result;
     },
-    onSuccess: () => {
+    onSuccess: (data) => {
+      console.log('ContactForm: onSuccess called with data:', data);
       toast({
         title: '¡Solicitud enviada!',
         description: 'Nos pondremos en contacto con usted pronto.',
       });
+      console.log('ContactForm: Toast called, resetting form');
       form.reset();
+      console.log('ContactForm: Form reset complete');
     },
     onError: (error: Error) => {
+      console.error('ContactForm: onError called with error:', error);
       toast({
         title: 'Error',
         description: error.message,
@@ -56,6 +66,8 @@ export default function ContactForm() {
   });
 
   const onSubmit = (data: InsertLead) => {
+    console.log('ContactForm: onSubmit called with data:', data);
+    console.log('ContactForm: Form errors:', form.formState.errors);
     createLeadMutation.mutate(data);
   };
 
@@ -116,7 +128,15 @@ export default function ContactForm() {
           <div className="bg-card/80 backdrop-blur-xl p-10 rounded-[24px] border border-border elevation-3">
             <h3 className="text-title-large text-foreground mb-8">Solicita tu diagnóstico gratuito</h3>
 
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+            <form 
+              onSubmit={(e) => {
+                console.log('ContactForm: Form submit event triggered');
+                console.log('ContactForm: Form state errors:', form.formState.errors);
+                console.log('ContactForm: Form values:', form.getValues());
+                form.handleSubmit(onSubmit)(e);
+              }} 
+              className="space-y-5"
+            >
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="text-label-large text-foreground block mb-3">Nombre *</label>

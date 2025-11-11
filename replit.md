@@ -1,7 +1,7 @@
 # AGS WEB-SIL Landing Page
 
 ## Project Overview
-Modern landing page for AGS WEB-SIL, a Chilean medical license subsidy management service. The design blends professional B2B aesthetics with modern, dynamic visual elements inspired by Tec de Monterrey's landing page, featuring vibrant gradients, blur effects, and contemporary UI patterns.
+Modern landing page for AGS WEB-SIL, a Chilean medical license subsidy management service. **Now redesigned with Material Design 3 (M3)** featuring a cohesive dark theme, blue/pink color palette, and streamlined component architecture that eliminates content duplication.
 
 ## Purpose & Goals
 - Convert visitors into qualified leads through compelling storytelling and social proof
@@ -11,7 +11,7 @@ Modern landing page for AGS WEB-SIL, a Chilean medical license subsidy managemen
 
 ## Technology Stack
 - **Frontend**: React + TypeScript + Vite
-- **Styling**: Tailwind CSS with custom design system
+- **Styling**: Tailwind CSS with Material Design 3 custom tokens
 - **UI Components**: shadcn/ui (Radix UI primitives)
 - **Routing**: Wouter
 - **Forms**: React Hook Form + Zod validation
@@ -19,55 +19,64 @@ Modern landing page for AGS WEB-SIL, a Chilean medical license subsidy managemen
 - **Backend**: Express.js (Node.js)
 - **Storage**: In-memory (MemStorage)
 
-## Design System
+## Material Design 3 System (November 2025 Redesign)
 
 ### Color Palette
-**Primary Colors:**
-- Blue Gradient: `from-blue-600 via-blue-700 to-blue-800`
-- Pink/Magenta Accent: `from-pink-500 to-pink-600`
-- Dark Backgrounds: `from-slate-900 via-blue-900 to-slate-900`
+**M3 Primary (Blue):**
+- Primary: `#3B82F6` (blue-500)
+- Primary Container: `#1E40AF` (blue-800)
+- On Primary: White text on primary backgrounds
 
-**Usage:**
-- Primary CTAs: Pink gradient buttons with shadow effects
-- Headers/Sections: Blue gradients
-- Hero sections: Dark gradients with blur circles
-- Cards/Stats: White overlay with low opacity (`bg-white/5` to `bg-white/10`)
+**M3 Secondary (Pink/Magenta):**
+- Secondary: `#EC4899` (pink-500)
+- Secondary Container: Darker pink variants
+- On Secondary: White text on secondary backgrounds
 
-### Typography
-- **Font Family**: Inter (sans-serif)
-- **Headings**: Bold (font-weight: 700), large sizes (text-4xl to text-6xl)
-- **Body**: Regular weight, relaxed leading
-- **CTAs**: Bold, uppercase for emphasis
+**M3 Surface & Background:**
+- Background: Dark slate (`#0F172A`, `#1E293B`)
+- Surface: Card backgrounds with tonal variations
+- Surface Dim/Bright: Subtle elevation hierarchy
+- Border colors: Low-opacity white (`border-white/10`)
 
-### Visual Effects
-1. **Blur Circles**: Decorative gradient circles with `blur-3xl` and low opacity
-2. **Glassmorphism**: `backdrop-blur-xl` with semi-transparent backgrounds
-3. **Hover Effects**: 
-   - Scale transforms (`hover:scale-105`)
-   - Shadow intensification (`hover:shadow-2xl`)
-   - Translation (`hover:-translate-y-2`)
-4. **Transitions**: Smooth `duration-300` animations
+### Typography Scale (M3)
+Based on Roboto/system fonts with M3 type scale:
+- **Display Large**: Hero titles (text-6xl equivalent)
+- **Display Medium/Small**: Section titles
+- **Headline Large/Medium/Small**: Subsection headings
+- **Title Large/Medium/Small**: Card titles, labels
+- **Body Large/Medium/Small**: Paragraph text
+- **Label Large/Medium/Small**: Form labels, buttons
 
-## Component Architecture
+### Visual System
+1. **Border Radius**: 24px for cards, 16px for smaller elements, 100px for FAB buttons
+2. **Elevation**: `elevation-1`, `elevation-2`, `elevation-3` utilities (tonal, not shadow-based)
+3. **Spacing**: 8dp grid system (Tailwind units: 2, 4, 6, 8)
+4. **Transitions**: Fast 200ms for interactions
+5. **Blur Effects**: Decorative background gradients with `blur-3xl`
 
-### Modern Components (New Design)
-1. **ModernHeader** - Sticky header with gradient stripe, smooth scroll navigation
-2. **ModernHero** - Dark gradient hero with blur effects and animated stats grid
-3. **StatsSection** - 4-column stats with icon cards and hover effects
-4. **CTASection** - Intermediate conversion sections with gradient backgrounds
-5. **Testimonials** - Client testimonials with star ratings and results
-6. **ModernFooter** - Dark gradient footer with social links and contact info
-7. **FloatingCTA** - Floating action button with WhatsApp and phone options
-8. **ContactForm** - Dark-themed form with glassmorphism design
+## Component Architecture (M3 Streamlined)
 
-### Existing Components (Maintained)
-- **ProblemStats** - Statistical problem presentation
-- **ProcessComplexity** - Process visualization
-- **RiskCalculator** - Interactive risk calculator
-- **Solution** - Solution presentation
-- **FivePillars** - Core pillars of service
-- **Implementation** - Implementation process
-- **PricingModel** - Pricing information
+### Active Components (9 total - consolidated from 13)
+1. **ModernHeader** - M3 sticky header with elevation, smooth scroll navigation
+2. **ModernHero** - Display typography, single call-to-action, no duplicate stats
+3. **StatsSection** - **ONLY** stats section (4 cards: MM$16K, 70+, 60%, compliance)
+4. **Problem** - Consolidated problem presentation (merged ProblemStats + ProcessComplexity)
+5. **SolutionBenefits** - Integrated solution with 5 pillars (merged Solution + FivePillars)
+6. **RiskCalculator** - Interactive calculator with M3 cards (no card nesting)
+7. **Testimonials** - Client testimonials with M3 elevation
+8. **PricingModel** - 3 pricing tiers with M3 styling
+9. **ContactForm** - Lead capture with M3 inputs, **NO duplicate stats**
+10. **ModernFooter** - M3 footer with contact info and social links
+11. **FloatingCTA** - Fixed bottom-right FAB with contact options
+
+### Removed/Consolidated Components
+- ❌ **CTASection** - Removed (redundant with other CTAs)
+- ❌ **Implementation** - Removed (content consolidated)
+- ✅ **ProblemStats + ProcessComplexity** → **Problem** (single component)
+- ✅ **Solution + FivePillars** → **SolutionBenefits** (single component)
+
+### Page Flow (Optimized)
+Hero → Stats → Problem → SolutionBenefits → Calculator → Testimonials → Pricing → Contact → Footer
 
 ## Key Features
 
@@ -113,20 +122,32 @@ Based on Tec de Monterrey's corporate programs landing page:
 - Clean, professional B2B aesthetic
 - Dynamic visual elements
 
-## Recent Changes (November 2025)
-- ✅ Redesigned with modern fusion aesthetic
-- ✅ Created 8 new modern components
-- ✅ Integrated gradient system with blue/pink palette
-- ✅ Added floating CTA with contact options
-- ✅ Implemented glassmorphism design patterns
-- ✅ Enhanced testimonials and stats sections
-- ✅ Modernized contact form with dark theme
-- ✅ Implemented complete lead capture system
+## Recent Changes (November 2025 - Material Design 3 Redesign)
+- ✅ Complete Material Design 3 redesign with dark theme
+- ✅ Generated design_guidelines.md with M3 specifications
+- ✅ Updated index.css with M3 color tokens and elevation system
+- ✅ Eliminated ALL duplicate statistics (consolidated into single StatsSection)
+- ✅ Consolidated components from 13 to 9 (removed CTASection, Implementation)
+- ✅ Merged ProblemStats + ProcessComplexity → Problem component
+- ✅ Merged Solution + FivePillars → SolutionBenefits component
+- ✅ Redesigned all components with M3 styling:
+  - ModernHero: Display typography, streamlined CTAs
+  - StatsSection: 4 M3 cards with 24px border radius
+  - Problem: Consolidated problem data without duplication
+  - SolutionBenefits: 5 pillars integrated into solution
+  - RiskCalculator: M3 cards, proper container (no card nesting)
+  - Testimonials: M3 elevation and styling
+  - PricingModel: M3 pricing tiers
+  - ContactForm: M3 inputs, contact info cards (NO stats)
+  - ModernHeader: M3 navigation with elevation
+  - ModernFooter: M3 footer styling
+- ✅ Lead capture system fully functional and tested:
   - Lead schema with Zod validation
   - API endpoint POST /api/leads with validation
   - React Hook Form integration in ContactForm
   - MemStorage for development (temporary)
-  - E2E tested and working
+  - E2E tested with comprehensive logging
+  - Form submission, validation, and reset working correctly
 
 ## User Preferences
 - Modern, dynamic design with gradients
