@@ -12,7 +12,7 @@ import FloatingCTA from '@/components/FloatingCTA';
 
 export default function Home() {
   return (
-    <div className="min-h-screen dark">
+    <div className="min-h-screen">
       <ModernHeader />
       <ModernHero />
       <StatsSection />
