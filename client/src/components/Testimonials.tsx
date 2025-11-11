@@ -20,31 +20,35 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="w-full bg-white py-24 relative overflow-hidden">
-      <div className="absolute -bottom-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+    <section className="w-full bg-background py-24 relative overflow-hidden">
+      <div className="absolute -bottom-20 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-20 text-center">
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
+        {/* M3 Headline Large */}
+        <h2 className="text-headline-large bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-20 text-center">
           Resultados Comprobables
         </h2>
 
+        {/* M3 Cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className="group p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-200 hover:border-blue-400 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="group p-8 rounded-[24px] bg-card border border-border elevation-1 hover:elevation-3 transition-all duration-200 hover:-translate-y-1"
               data-testid={`card-testimonial-${idx}`}
             >
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+                  <Star key={i} size={18} className="fill-secondary text-secondary" />
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 text-sm leading-relaxed">{testimonial.text}</p>
-              <div className="border-t border-blue-200 pt-4">
-                <p className="text-xs text-gray-600 mb-2">Empresa:</p>
-                <p className="font-bold text-gray-900 mb-3">{testimonial.company}</p>
-                <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              
+              <p className="text-body-medium text-muted-foreground mb-8 leading-relaxed">{testimonial.text}</p>
+              
+              <div className="border-t border-border pt-6">
+                <p className="text-label-medium text-muted-foreground mb-2">Empresa:</p>
+                <p className="text-title-large text-foreground mb-4">{testimonial.company}</p>
+                <p className="text-headline-medium bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                   {testimonial.result}
                 </p>
               </div>

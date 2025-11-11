@@ -39,19 +39,21 @@ export default function RiskCalculator() {
   };
 
   return (
-    <section id="calculadora" className="py-20 bg-gradient-to-br from-primary/5 to-primary/10">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="calculadora" className="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
+      <div className="max-w-5xl mx-auto px-8">
+        {/* M3 Headline Large */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Calcule su riesgo de exposición</h2>
-          <p className="text-xl text-muted-foreground">
+          <h2 className="text-headline-large mb-4">Calcule su riesgo de exposición</h2>
+          <p className="text-body-large text-muted-foreground">
             Estime cuánto podría estar perdiendo su empresa en subsidios no recuperados
           </p>
         </div>
 
-        <Card className="p-8">
-          <div className="mb-8">
-            <label className="block text-lg font-semibold mb-4">
-              Tamaño de su dotación: <span className="text-primary">{dotacion.toLocaleString('es-CL')}</span> trabajadores
+        {/* M3 Card with 24px radius */}
+        <Card className="p-10 rounded-[24px] elevation-2">
+          <div className="mb-10">
+            <label className="block text-title-large mb-6">
+              Tamaño de su dotación: <span className="text-primary font-semibold">{dotacion.toLocaleString('es-CL')}</span> trabajadores
             </label>
             <Slider
               value={[dotacion]}
@@ -59,61 +61,68 @@ export default function RiskCalculator() {
               min={100}
               max={10000}
               step={100}
-              className="mb-2"
+              className="mb-3"
               data-testid="slider-dotacion"
             />
-            <div className="flex justify-between text-sm text-muted-foreground">
+            <div className="flex justify-between text-label-medium text-muted-foreground">
               <span>100</span>
               <span>10,000</span>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <Card className="p-6 bg-card hover-elevate transition-all duration-300" data-testid="card-riesgo-mensual">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <DollarSign className="w-5 h-5 text-primary" />
+          {/* M3 Result cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            <Card className="p-6 bg-card rounded-[24px] hover-elevate transition-all duration-200 border-border" data-testid="card-riesgo-mensual">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-[16px] flex items-center justify-center elevation-1">
+                  <DollarSign className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-semibold">Riesgo Mensual</h3>
+                <h3 className="text-title-medium">Riesgo Mensual</h3>
               </div>
-              <div className="text-2xl font-bold text-primary mb-1">
+              <div className="text-headline-small font-semibold text-primary mb-2">
                 {formatCurrency(risk.riesgoMensual)}
               </div>
-              <p className="text-sm text-muted-foreground">Exposición promedio mensual</p>
+              <p className="text-body-small text-muted-foreground">Exposición promedio mensual</p>
             </Card>
 
-            <Card className="p-6 bg-card hover-elevate transition-all duration-300" data-testid="card-riesgo-anual">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-chart-3/10 rounded-lg flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 text-chart-3" />
+            <Card className="p-6 bg-card rounded-[24px] hover-elevate transition-all duration-200 border-border" data-testid="card-riesgo-anual">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-chart-3/10 rounded-[16px] flex items-center justify-center elevation-1">
+                  <TrendingUp className="w-6 h-6 text-chart-3" />
                 </div>
-                <h3 className="font-semibold">Riesgo Anual</h3>
+                <h3 className="text-title-medium">Riesgo Anual</h3>
               </div>
-              <div className="text-2xl font-bold text-chart-3 mb-1">
+              <div className="text-headline-small font-semibold text-chart-3 mb-2">
                 {formatCurrency(risk.riesgoAnual)}
               </div>
-              <p className="text-sm text-muted-foreground">Exposición anual estimada</p>
+              <p className="text-body-small text-muted-foreground">Exposición anual estimada</p>
             </Card>
 
-            <Card className="p-6 bg-card hover-elevate transition-all duration-300" data-testid="card-riesgo-5anos">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center">
-                  <AlertTriangle className="w-5 h-5 text-destructive" />
+            <Card className="p-6 bg-card rounded-[24px] hover-elevate transition-all duration-200 border-border" data-testid="card-riesgo-5anos">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-destructive/10 rounded-[16px] flex items-center justify-center elevation-1">
+                  <AlertTriangle className="w-6 h-6 text-destructive" />
                 </div>
-                <h3 className="font-semibold">Pérdida por Prescripción</h3>
+                <h3 className="text-title-medium">Pérdida por Prescripción</h3>
               </div>
-              <div className="text-2xl font-bold text-destructive mb-1">
+              <div className="text-headline-small font-semibold text-destructive mb-2">
                 {formatCurrency(risk.riesgo5Anos)}
               </div>
-              <p className="text-sm text-muted-foreground">Riesgo acumulado a 5 años</p>
+              <p className="text-body-small text-muted-foreground">Riesgo acumulado a 5 años</p>
             </Card>
           </div>
 
+          {/* M3 CTA */}
           <div className="text-center">
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-body-medium text-muted-foreground mb-6">
               Con {risk.licenciasAnuales.toLocaleString('es-CL')} licencias estimadas al año
             </p>
-            <Button size="lg" onClick={scrollToContact} data-testid="button-recuperar-fondos">
+            <Button 
+              size="lg" 
+              onClick={scrollToContact} 
+              className="rounded-[100px] text-label-large px-8 elevation-1 hover:elevation-2"
+              data-testid="button-recuperar-fondos"
+            >
               Recupere estos fondos - Contáctenos
             </Button>
           </div>
