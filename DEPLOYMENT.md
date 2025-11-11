@@ -79,9 +79,30 @@ La aplicación estará disponible en la URL que te proporcione Dokploy.
 
 **Health Check:** Tu aplicación incluye un health check en `/api/health`
 
+## Configuración de Dominio en Dokploy
+
+Para acceder a tu aplicación:
+
+### Opción 1: Usar el dominio de Dokploy
+Dokploy te asignará automáticamente una URL.
+
+### Opción 2: Configurar tu propio dominio
+1. En Dokploy, ve a tu aplicación → **Settings** → **Domains**
+2. Agrega tu dominio (ej: `landing.tuempresa.com`)
+3. Dokploy te mostrará la configuración DNS necesaria
+4. Actualiza los registros DNS de tu dominio:
+   - **Tipo A**: Apunta a la IP del servidor Dokploy
+   - O **CNAME**: Apunta al dominio de Dokploy
+
+### Acceso Directo por Puerto
+La aplicación también está disponible en:
+```
+http://tu-servidor:5000
+```
+
 ## Notas Importantes
 
-- ✅ El puerto 5000 NO necesita estar libre en tu servidor (Dokploy maneja el routing)
+- ✅ Puerto 5000 expuesto para acceso directo
 - ✅ La aplicación corre como usuario no-root por seguridad
 - ✅ Incluye health checks automáticos
 - ✅ Optimizado con build multi-stage para menor tamaño de imagen
